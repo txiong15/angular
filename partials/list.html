@@ -22,9 +22,11 @@
     <div>
         <ul class="artistlist">
             <li class="artist cf" ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
+                <a href="#/details/{{artists.indexOf(item)}}">
                 <img ng-src="images/{{item.shortname}}_tn.jpg" alt="photo of {{ item.name }}" />
                 <h2>{{item.name | uppercase}}</h2>
                 <h3>{{item.reknown}}</h3>
+                </a>
             </li>
         </ul>
     </div>
